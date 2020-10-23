@@ -1,0 +1,13 @@
+login to centos
+
+login: jenkins
+password: 12345
+
+ip a
+
+ssh
+inet 192.168.1.108/24
+
+ssh jenkins@192.168.1.108
+
+ip a

@@ -1,0 +1,3 @@
+http://localhost:8080/job/maven-project/build?token=TOKEN
+
+https://wiki.jenkins.io/display/JENKINS/GitHub+Plugin

@@ -1,0 +1,3 @@
+If you are on a Mac, you can check what is using port 80 with the command: lsof -i :80
+
+If you are on Windows, you can check what is using port 80 with: netstat

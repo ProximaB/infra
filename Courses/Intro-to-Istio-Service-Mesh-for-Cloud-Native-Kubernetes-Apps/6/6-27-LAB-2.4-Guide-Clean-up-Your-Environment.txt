@@ -1,0 +1,5 @@
+kubectl delete -f samples/bookinfo/platform/kube/bookinfo.yaml
+
+kubectl delete -f install/kubernetes/istio-demo-auth.yaml
+
+minikube delete

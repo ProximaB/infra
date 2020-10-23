@@ -1,0 +1,19 @@
+minikube start --memory 8192
+
+kubectl apply -f samples/bookinfo/networking/bookinfo-gateway.yaml
+
+kubectl create -f samples/bookinfo/networking/destination-rule-all-mtls.yaml
+
+export GATEWAY_URL=$(minikube ip):$(kubectl get svc istio-ingressgateway -n istio-system -o 'jsonpath={.spec.ports[0].nodePort}')
+
+minikube ip
+
+kubectl get svc istio-ingressgateway -n istio-system -o 'jsonpath={.spec.ports[0].nodePort}'
+
+kubectl get svc istio-ingressgateway -n istio-system
+
+curl -o /dev/null -s -w "%{http_code}\n" http://${GATEWAY_URL}/productpage
+
+echo "Site page for your browser: http://${GATEWAY_URL}/productpage"
+
+http://${GATEWAY_URL}/productpage

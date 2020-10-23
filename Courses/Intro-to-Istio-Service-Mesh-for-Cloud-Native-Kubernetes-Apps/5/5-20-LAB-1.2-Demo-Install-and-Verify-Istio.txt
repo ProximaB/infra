@@ -1,0 +1,20 @@
+minikube start --memory 8192
+
+Istio version: 1.0.0
+
+Configuration yaml version: 1.0.0
+
+cd istio-1.0.0
+
+kubectl apply -f install/kubernetes/helm/istio/templates/crds.yaml
+
+kubectl apply -f install/kubernetes/istio-demo-auth.yaml
+
+kubectl get svc -n istio-system
+
+minikube ip
+192.168.99.100
+
+kubectl get pods -n istio-system
+
+kubectl get pods -n istio-system -w

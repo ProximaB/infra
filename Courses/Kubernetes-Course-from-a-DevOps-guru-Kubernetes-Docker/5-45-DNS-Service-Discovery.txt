@@ -1,0 +1,15 @@
+kubectl create -f ./mysql-deployment.yaml
+
+kubectl get pods
+
+kubectl create -f ./wordpress-deployment.yaml
+
+kubectl get services wordpress
+
+minikube service wordpress --url
+
+minikube service wordpress
+
+
+Difference between kubectl create and kubectl apply : kubectl create can be used only for creating new deployments;
+kubectl apply can be used for both creating and updating deployments. Other than that they're pretty much identical.

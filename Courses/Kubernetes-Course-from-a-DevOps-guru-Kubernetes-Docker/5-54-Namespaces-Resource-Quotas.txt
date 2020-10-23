@@ -1,0 +1,13 @@
+kubectl create namespace <namespace name>
+
+kubectl get namespace
+
+kubectl create namespace cpu-limited-tomcat
+
+kubectl create -f ./cpu-limits.yaml --namespace=cpu-limited-tomcat
+
+kubectl get resourcequota --namespace=cpu-limited-tomcat
+
+kubectl apply -f ./tomcat-deployment.yaml --namespace=cpu-limited-tomcat
+
+kubectl describe deployment tomcat-deployment --namespace=cpu-limited-tomcat

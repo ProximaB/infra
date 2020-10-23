@@ -1,0 +1,5 @@
+kubectl run mongo-exercise-1 --image=mongo --port=27017
+
+kubectl scale --replicas=4 deployment/mongo-exercise-1
+
+kubectl describe deployment mongo-exercise-1

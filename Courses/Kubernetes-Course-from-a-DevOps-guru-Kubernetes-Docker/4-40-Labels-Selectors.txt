@@ -1,0 +1,19 @@
+kubectl get nodes
+
+kubectl describe node minikube
+
+create labels for the nodes:
+kubectl label node <nodename> <labelname>=allow
+
+delete above labels from its respecitve nodes:
+kubectl label node <nodename> <labelname>-
+
+kubectl label node minikube storageType=ssd
+
+kubectl apply -f ./deployment.yaml
+
+kubectl describe node minikube
+
+kubectl label node minikube storageType-
+
+kubectl describe node minikube

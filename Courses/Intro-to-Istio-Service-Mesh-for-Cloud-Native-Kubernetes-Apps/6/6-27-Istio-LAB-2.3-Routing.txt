@@ -1,0 +1,17 @@
+istioctl get destinationrules
+
+kubectl create -f samples/bookinfo/networking/virtual-service-all-v1.yaml
+
+istioctl get destinationrules
+
+kubectl get virtualservice -o yaml
+
+kubectl apply -f samples/bookinfo/networking/virtual-service-reviews-test-v2.yaml
+
+kubectl get virtualservice reviews -o yaml
+
+kubectl apply -f samples/bookinfo/networking/virtual-service-reviews-50-v3.yaml
+
+kubectl edit virtualservice reviews
+
+kubectl apply -f samples/bookinfo/networking/virtual-service-reviews-v3.yaml
